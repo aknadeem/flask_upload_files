@@ -1,8 +1,8 @@
 
 venv/
-env*
+venv*
 dist/
-static/
+static*
 
 .cache/
 .pytest_cache/
