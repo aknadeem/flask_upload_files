@@ -1,0 +1,12 @@
+
+venv/
+env*
+dist/
+static/
+
+.cache/
+.pytest_cache/
+.idea/
+example.cfg
+libformat.cfg
+main.py

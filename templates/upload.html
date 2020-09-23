@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div style="margin: 100px auto; width: 700px;">
+  <title>Python Flask Image Upload and Display Example</title>
+  <h2>Select an image to upload and display</h2>
+  <p>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <ul class=flashes>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+      </ul>
+      {% endif %}
+    {% endwith %}
+  </p>
+  {% if filename %}
+    <div>
+      <img src="{{ url_for('display_image', filename=filename) }}" width="100px" alt="image">
+    </div>
+  {% endif %}
+
+    <form method="post" action="/uploadFiles" enctype="multipart/form-data">
+        <dl>
+        <p>
+          <input type="file" name="file" autocomplete="off" required>
+        </p>
+        </dl>
+        <p>
+        <input type="submit" value="Submit">
+      </p>
+    </form>
+  </div>
+</body>
+</html>
