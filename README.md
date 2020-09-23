@@ -12,7 +12,5 @@ Two types are file upload one zip and other normal if zip file is uploaded i sav
 
 	`python server.py`
 
-# ScreenShots
-
 
 
